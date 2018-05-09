@@ -16,6 +16,12 @@ class CreateCatsTable extends Migration
         Schema::create('cats', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+			$table->string('name');
+			$table->string('image');
+			$table->unsignedInteger('latitude');
+			$table->unsignedInteger('longitude');
+			$table->string('kind');
+			$table->text('detail');
         });
     }
 
